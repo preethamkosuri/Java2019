@@ -5,7 +5,7 @@
  * 
  * @author Siva Sankar
  */
-
+ package M1.SimpleInterest;
  public class SimpleInterest {
 
     /**
@@ -23,6 +23,6 @@
         //  Your code goes here....
         
         
-        return 0.0
+        return (principle*numberOfYears*rateOfInterest)/100;
     }
  }
