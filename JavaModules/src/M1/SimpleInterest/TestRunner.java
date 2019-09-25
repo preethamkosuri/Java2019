@@ -20,7 +20,7 @@ public class TestRunner {
 
       if (result.wasSuccessful() == true) {
          System.out.println("");
-         System.out.println("Great! All test cases passed.....");
+         System.out.println("Great! in simpleinterest All test cases passed.....");
          System.out.println("");
       } else {
          System.out.println("Oh!!! Some of the test cases failed may be because of logical errors");
