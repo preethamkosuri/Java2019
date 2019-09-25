@@ -9,7 +9,7 @@
  * 
  * @author Siva Sankar
  */
-
+package M1.AbsoluteNumber;
 public class AbsoluteNumber {
 
     /**
@@ -19,5 +19,6 @@ public class AbsoluteNumber {
      */
     public static int abs(int n) {
         // Your code goes here....
+        return Math.abs(n);
     }
 }

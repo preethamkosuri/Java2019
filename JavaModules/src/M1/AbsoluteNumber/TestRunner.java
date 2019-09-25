@@ -8,7 +8,7 @@
  * 
  * @author: Siva Sankar
  */
-
+package M1.AbsoluteNumber;
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
@@ -20,7 +20,7 @@ public class TestRunner {
 
       if (result.wasSuccessful() == true) {
          System.out.println("");
-         System.out.println("Great!!! All test cases passed.....");
+         System.out.println("Great!1! All test cases passed.....");
          System.out.println("");
       } else {
          System.out.println("Oh!!! Some of the test cases failed may be because of logical errors");
