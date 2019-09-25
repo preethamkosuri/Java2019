@@ -4,6 +4,13 @@
             "type": "java",
             "name": "CodeLens (Launch) - TestRunner",
             "request": "launch",
+            "mainClass": "M2.MonkeyTrouble.TestRunner",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestRunner",
+            "request": "launch",
             "mainClass": "M2.SleepIn.TestRunner",
             "projectName": "JavaModules"
         },
