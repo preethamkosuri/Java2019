@@ -24,7 +24,7 @@
  * 
  * @author Siva Sankar
  */
-package m3.Stats;
+package M3.Stats;
 import java.util.*;
 
 public class Stats {
@@ -66,7 +66,6 @@ public class Stats {
         int n = arr.length; 
         if (n % 2==0) {
         	return (double)arr[n/2];
-        	
         }
         return (double)(arr[(n - 1) / 2] + arr[n / 2]) / 2.0;
     }

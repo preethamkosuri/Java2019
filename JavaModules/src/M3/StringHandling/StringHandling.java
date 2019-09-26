@@ -7,7 +7,7 @@
  * 
  * @author Siva Sankar
  */
-package m3.StringHandling;
+package M3.StringHandling;
 public class StringHandling {
 
     /**

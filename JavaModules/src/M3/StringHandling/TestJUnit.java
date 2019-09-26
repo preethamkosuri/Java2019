@@ -9,10 +9,10 @@
  * 
  * @author Siva Sankar
  */
-package m3.StringHandling;
-import org.junit.Test;
+package M3.StringHandling;
+
 import org.junit.Assert;
-import static org.junit.Assert.assertEquals;
+import org.junit.Test;
 
 public class TestJUnit {
 	@Test

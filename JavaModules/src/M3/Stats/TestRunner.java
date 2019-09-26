@@ -13,7 +13,7 @@
  * 
  */
 
-package m3.Stats;
+package M3.Stats;
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;

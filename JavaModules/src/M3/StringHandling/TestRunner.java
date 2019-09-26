@@ -12,7 +12,7 @@
  * @author Mayank
  * 
  */
-package m3.StringHandling;
+package M3.StringHandling;
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;

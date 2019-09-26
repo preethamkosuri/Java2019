@@ -8,9 +8,8 @@
  * 
  * @author Siva Sankar
  */
-package m3.Stats;
-import org.junit.Test;
-import org.junit.Assert;
+package M3.Stats;
+import org.junit.*;
 import static org.junit.Assert.assertEquals;
 
 public class TestJUnit {
