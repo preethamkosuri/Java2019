@@ -1,14 +1,14 @@
 /**
- * This is TestRunner class which picks the test cases from the JUnit and executes 
- * each test case. This will shows an output on the console about how many test cases
- * passed / failed when you run this TestRunner class.
+ * This is a TestRunner class that tests JUnit class which contains the test cases
+ * written for the MonkeyTrouble. 
  * 
- * There will be a detailed information about which test cases have been failed 
- * or passed.
+ * Run this file whereever you are done writing the code for Monkey Trouble. This 
+ * TestRunner tests your code.
  * 
- * @author: Siva Sankar
+ * Please don't modify the code.
+ * @author Siva Sankar
  */
-package M4.ContactManager;
+package m3.StringTimes;
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
@@ -34,10 +34,10 @@ public class TestRunner {
             System.out.println("Expected Output : " + failure.getMessage().substring(start+1, end));
             start = failure.getMessage().indexOf("<", start + 1);
             end = failure.getMessage().indexOf(">", end + 1);
-            System.out.println("Your Output     : " + failure.getMessage().substring(start+1, end));
-            System.out.println("\nFull Message : " + failure.getMessage());
+            System.out.println("Your Output : " + failure.getMessage().substring(start+1, end));
             System.out.println("===============================");
          }
+         System.out.println("Congratulation");
          System.out.println((result.getRunCount() - result.getFailureCount()) + " / " + result.getRunCount() + " Test Cases Passed....");
       }
    }

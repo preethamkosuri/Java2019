@@ -16,6 +16,9 @@
  * 
  * @author Siva Sankar
  */
+package M4.ContactManager;
+
+import java.util.*;
 
 class ContactsManager {
 
@@ -23,11 +26,15 @@ class ContactsManager {
      * Define a variable myFriends which is an array that can hold 
      * the contacts of your friends.
      */
+    Contact[] myFriends = new Contact[500];
+    
 
     /**
      * Define a variable friendsCount of type int maintain the number of 
      * contacts of your friends.
      */
+    int friendsCount = 0;
+
 
 
     /**
@@ -45,6 +52,8 @@ class ContactsManager {
      */
     public void addContact(Contact contact) {
         //  Your code goes here....
+        myFriends[friendsCount] = contact;
+        friendsCount++;
 
         //  Nothing to be returned... As this method is void...
     }
@@ -55,9 +64,13 @@ class ContactsManager {
      * @param searchName, the name of the contact to be searched in the friends list.
      * @return the contact of the friend, null otherwise.
      */
-    public Contact searchContact(String searchName) {
+    public String searchContact(String searchName) {
         //  Your code goes here....
-
+        for(int i=0; i < myFriends.length; i++){
+            if(myFriends[i].Name.equals(searchName)){
+                return myFriends[i];
+            }
+        }
         return null;
     }
 
@@ -69,7 +82,11 @@ class ContactsManager {
      */
     public Contact searchContactByEmail(String email) {
         //  Your code goes here....
-
+        for(int i=0; i < myFriends.length; i++){
+            if(myFriends[i].Email.equals(email)){
+                return myFriends[i];
+            }
+        }
         return null;
     }
 
@@ -82,7 +99,16 @@ class ContactsManager {
      */
     public boolean deleteContact(String searchName) {
         //  Your code goes here....
-
+        for(int i=0;(myFriends[i].Name.equals(searchName);) {
+            myFriends.splice(i);
+            return true;
+            }
+        for(int i=0; i < myFriends.length; i++){
+            if(myFriends[i].Name.equals(searchName)){
+                myFriends.splice(i);
+                return true;
+            }
+        }
         return false;
     }
 
