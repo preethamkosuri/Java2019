@@ -13,7 +13,7 @@
  * 
  */
 
-package m3.Squares;
+package M3.Squares;
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;

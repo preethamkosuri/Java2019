@@ -8,10 +8,9 @@
  * 
  * @author Siva Sankar
  */
-package m3.Squares;
+package M3.Squares;
 import org.junit.Test;
 import org.junit.Assert;
-import static org.junit.Assert.assertEquals;
 
 public class TestJUnit {
 	@Test

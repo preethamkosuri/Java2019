@@ -9,7 +9,7 @@
  * 
  * @author: Siva Sankar
  */
-package m3.MiniMaxSum;
+package M3.MiniMaxSum;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 

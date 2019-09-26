@@ -11,7 +11,7 @@
  * 
  * @author Siva Sankar
  */
-package m3.MiniMaxSum;
+package M3.MiniMaxSum;
 public class MiniMaxSum {
 
     /**
@@ -45,7 +45,6 @@ public class MiniMaxSum {
     			max=arr[i];
     		}
     	}
-        
         return max;
     }
 
@@ -59,20 +58,20 @@ public class MiniMaxSum {
         //  Your code goes here...
         int a=min(arr);
         int b=max(arr);
-        int sum=0;
-        int c=0;
+        int sum1=0;
+        int sum2=0;
         for (int i=0;i<arr.length;i++) {
-		if (arr[i]!=a) {
-			sum+=arr[i];
-        }
-		if (arr[i]!=b) {
-			c+=arr[i];
-		}
+            if (arr[i]!=a) {
+                sum1+=arr[i];
+            }
+		    if (arr[i]!=b) {
+			    sum2+=arr[i];
+		    }
         }
 		String s="";
-	    s=s+sum+"";
+	    s=s+sum1+"";
 	    s=s+","+"";
-	    s=s+c+"";
+	    s=s+sum2+"";
 	    return s;
     }
    
@@ -87,7 +86,6 @@ public class MiniMaxSum {
      */
     public static String miniMaxSum(int[] arr) {
         //  Your code goes here...
-        
         if (arr.length>1) {
         	return (sum(arr));
         }

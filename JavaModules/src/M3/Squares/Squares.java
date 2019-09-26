@@ -8,7 +8,7 @@
  * @author Siva Sankar
  * @author Mayank
  */
-package m3.Squares;
+package M3.Squares;
 public class Squares {
 
     /**
@@ -23,8 +23,9 @@ public class Squares {
      */
     public static int[] squared(int[] nums) {
         //  Your code goes here.
-        for (int i=0;i<nums.length;i++)
-    	nums[i]=nums[i]*nums[i];
+        for (int i=0;i<nums.length;i++){
+        nums[i]=nums[i]*nums[i];
+        }
         return nums;
     }
 }
