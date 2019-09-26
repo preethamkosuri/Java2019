@@ -8,7 +8,7 @@
  * 
  * @author: Siva Sankar
  */
-package m3.StringTimes;
+package M3.StringTimes;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 

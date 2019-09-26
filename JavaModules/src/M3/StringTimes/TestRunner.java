@@ -8,7 +8,7 @@
  * Please don't modify the code.
  * @author Siva Sankar
  */
-package m3.StringTimes;
+package M3.StringTimes;
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;

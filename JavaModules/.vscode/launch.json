@@ -4,6 +4,13 @@
             "type": "java",
             "name": "CodeLens (Launch) - TestRunner",
             "request": "launch",
+            "mainClass": "M3.StringTimes.TestRunner",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestRunner",
+            "request": "launch",
             "mainClass": "M3.StringHandling.TestRunner",
             "projectName": "JavaModules"
         },

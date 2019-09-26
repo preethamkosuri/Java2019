@@ -9,7 +9,7 @@
  * 
  * @author Siva Sankar
  */
-package m3.StringTimes;
+package M3.StringTimes;
 public class StringTimes {
     /**
      * This method returns the String that is appending the String n 
