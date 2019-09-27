@@ -25,6 +25,7 @@
  * @author Siva Sankar
  */
 package M3.Stats;
+
 import java.util.*;
 
 public class Stats {
@@ -36,18 +37,8 @@ public class Stats {
      * @return the mean of the array.
      */
     public static double mean(int[] arr) {
-        int n =arr.length;
-        int sum=0;
-        if(n>1) {
-        	for (int i=0;i<n;i++) {
-        		sum+=arr[i];
-
-        		}
-        	return (double)sum/(double)n;
-        }
-        else {
-        	return 0;
-        }
+        double m1=mean(arr);
+        return m1;
     	
     }
 
@@ -63,11 +54,8 @@ public class Stats {
     public static double median(int[] arr) {
         //  Your code goes here...
         Arrays.sort(arr);
-        int n = arr.length; 
-        if (n % 2==0) {
-        	return (double)arr[n/2];
-        }
-        return (double)(arr[(n - 1) / 2] + arr[n / 2]) / 2.0;
+        double median=median(arr);
+        return median;
     }
 
     /**
@@ -79,23 +67,8 @@ public class Stats {
      */
     public static double mode(int[] arr) {
         //  Your code goes here....
-    	int n=arr.length;
-    	double x=0;
-    	int y=1;
-    	int count=0;
-    	for (int i=0;i<n;i++) {
-    		if (arr[i-1]==arr[i]) {
-    			count++;
-    		}
-    		if (count>y) {
-    			y=count;
-    			x=i;
-    		}
-    		else {
-    			count=1;
-    		}
-    	}
-    	return x;
+    	double mode=mode(arr);
+        return mode;
     }
 
     /**
@@ -107,17 +80,8 @@ public class Stats {
      */
     public static double variance(int[] arr) {
         //  Your code goes here....
-    	int n=arr.length;
-    	double sum = 0; 
-        for (int i = 0; i < n; i++) {
-        	sum +=arr[i]; 
-        }
-        double a = sum/n;
-        double v=0;
-        for (int i=0;i<n;i++) {
-        	v+=(arr[i]-a)*(arr[i]-a); 	
-        }
-        return  v/n;
+    	double v=variance(arr);
+        return v;
     }
 
     /**

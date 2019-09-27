@@ -11,7 +11,13 @@
 //  Your code goes here... For Contact class
 public class Contact{
     public static void main(String[] args) {
-        ContactsManager contact
+        ContactsManager contact=new ContactsManager();
+        String Name="";
+        contact.myFriends=Name;
+        String Email="";
+        contact.myFriends=Email;
+        String PhoneNumber="";
+        contact.myFriends=PhoneNumber;
         
     }
 }

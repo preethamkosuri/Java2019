@@ -40,8 +40,8 @@ public class MiniMaxSum {
     public static int max(int[] arr) {
         //  Your code goes here...
     	int max=arr[0];
-    	for (int i=0;i>arr.length;i++) {
-    		if(max>arr[i]) {
+    	for (int i=0;i<arr.length;i++) {
+    		if(max<arr[i]) {
     			max=arr[i];
     		}
     	}
@@ -58,20 +58,13 @@ public class MiniMaxSum {
         //  Your code goes here...
         int a=min(arr);
         int b=max(arr);
-        int sum1=0;
-        int sum2=0;
+        int sum=0;
         for (int i=0;i<arr.length;i++) {
-            if (arr[i]!=a) {
-                sum1+=arr[i];
-            }
-		    if (arr[i]!=b) {
-			    sum2+=arr[i];
-		    }
+            sum+=arr[i];
         }
-		String s="";
-	    s=s+sum1+"";
-	    s=s+","+"";
-	    s=s+sum2+"";
+        int sum1=sum-a;
+        int sum2=sum-b;
+		String s=sum1+","+sum2;
 	    return s;
     }
    
