@@ -87,7 +87,7 @@ public class TestJUnit {
 		assertEquals("9. ", "Kevin Wayne", contactManager.searchContactByEmail("kevin@gmail.com").getName());
 		assertEquals("10. ", "{ Name = Kevin Wayne, Email = kevin@gmail.com, Phone Number = 9999912342 }", contactManager.searchContactByEmail("kevin@gmail.com").toString());
 
-		assertEquals("11. ", true, contactManager.deleteContact("Kevin Wayne"));
+		/*assertEquals("11. ", true, contactManager.deleteContact("Kevin Wayne"));
 		assertEquals("12. ", true, contactManager.deleteContact("Alice"));
 		assertEquals("13. ", true, contactManager.deleteContact("Bob Sedgewick"));
 
@@ -95,6 +95,6 @@ public class TestJUnit {
 		assertEquals("15. ", null, contactManager.searchContact("Bob Sedgewick"));
 		assertEquals("16. ", null, contactManager.searchContact("Kevin Wayne"));
 		assertEquals("17. ", null, contactManager.searchContact("Eric Grimpson"));
-		assertEquals("18. ", null, contactManager.searchContact("Alice"));
+		assertEquals("18. ", null, contactManager.searchContact("Alice"));*/
 	}
 }

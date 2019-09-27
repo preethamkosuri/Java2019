@@ -18,8 +18,6 @@
  */
 package M4.ContactManager;
 
-import java.util.*;
-
 class ContactsManager {
 
     /**
@@ -64,13 +62,15 @@ class ContactsManager {
      * @param searchName, the name of the contact to be searched in the friends list.
      * @return the contact of the friend, null otherwise.
      */
-    public String searchContact(String searchName) {
+    public Contact searchContact(String searchName) {
         //  Your code goes here....
-        for(int i=0; i < myFriends.length; i++){
+        for(int i=0; i < friendsCount; i++){
             if(myFriends[i].Name.equals(searchName)){
+                //System.out.println("searchContact -- End in if");
                 return myFriends[i];
             }
         }
+        //System.out.println("searchContact -- End null");
         return null;
     }
 
@@ -82,7 +82,7 @@ class ContactsManager {
      */
     public Contact searchContactByEmail(String email) {
         //  Your code goes here....
-        for(int i=0; i < myFriends.length; i++){
+        for(int i=0; i <friendsCount; i++){
             if(myFriends[i].Email.equals(email)){
                 return myFriends[i];
             }
@@ -99,16 +99,11 @@ class ContactsManager {
      */
     public boolean deleteContact(String searchName) {
         //  Your code goes here....
-        for(int i=0;(myFriends[i].Name.equals(searchName);) {
-            myFriends.splice(i);
+        Contact c= searchContact(searchName);
+        if(c!=null){
+            c.setName(null);
             return true;
             }
-        for(int i=0; i < myFriends.length; i++){
-            if(myFriends[i].Name.equals(searchName)){
-                myFriends.splice(i);
-                return true;
-            }
-        }
         return false;
     }
 
