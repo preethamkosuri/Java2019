@@ -25,7 +25,6 @@
  * @author Siva Sankar
  */
 package M3.Stats;
-
 import java.util.*;
 
 public class Stats {
@@ -37,8 +36,17 @@ public class Stats {
      * @return the mean of the array.
      */
     public static double mean(int[] arr) {
-        double m1=mean(arr);
-        return m1;
+        int n =arr.length;
+        if(n>0) {
+            double sum=0;
+        	for (int i=0;i<n;i++) {
+        		sum+=arr[i];
+        		}
+        	return sum/n;
+        }
+        else {
+        	return 0;
+        }
     	
     }
 
@@ -54,8 +62,14 @@ public class Stats {
     public static double median(int[] arr) {
         //  Your code goes here...
         Arrays.sort(arr);
-        double median=median(arr);
-        return median;
+        int n = arr.length;
+        if(n>0){
+        if (n % 2==0) {
+            return (double)(arr[(n/2)-1] + arr[n / 2]) / 2.0;	
+        }
+        return (double)arr[n/2];
+        }
+        return 0;
     }
 
     /**
@@ -67,10 +81,27 @@ public class Stats {
      */
     public static double mode(int[] arr) {
         //  Your code goes here....
-    	double mode=mode(arr);
-        return mode;
-    }
+        int n=arr.length;
+        if(n>0){
+            int f=0,m=arr[0];
+            for(int i=0,c=0;i<n;i++,c=0){
+                for(int j=0;j<n;j++){
+                    if(arr[i]==arr[j]){
+                        ++c;
+                    }
+                if(f<c){
+                    f=c;
+                    m=arr[i];
+                }
+                }
+            }
+            if(f!=1){
+                return m;
+            }
 
+        }
+        return 0;
+    }
     /**
      * This method returns the variance of the input array.
      * Make use of the mean function which has already written.
@@ -80,8 +111,12 @@ public class Stats {
      */
     public static double variance(int[] arr) {
         //  Your code goes here....
-    	double v=variance(arr);
-        return v;
+    	int n=arr.length;
+        double v=0;
+        for (int i=0;i<n;i++) {
+        	v+=Math.pow(arr[i]-mean(arr),2); 	
+        }
+        return  v/n;
     }
 
     /**

@@ -34,10 +34,12 @@ class Listmain {
                 String l1=s1.nextLine();
                 ToDoList o=new ToDoList(d, t1, t2, ss, l1);
                 m.addTask(o);
+                break;
                 case 2:
                 System.out.println("enter taskname");
                 String name=s1.nextLine();
                 System.out.println(m.deleteTask(name));
+                break;
                 case 3:
                 System.out.println("enter taskname");
                 String nn=s1.nextLine();
@@ -45,23 +47,28 @@ class Listmain {
                 String sss=s1.nextLine();
                 m.updateStatus(nn,sss);
                 System.out.println("Done!");
+                break;
                 case 4:
                 m.displayPending();
+                break;
                 case 5:
                 System.out.println("enter lastdate(dd/mm/yyyy)");
                 String ll=s1.nextLine();
                 m.displayLastDate(ll);
+                break;
                 case 6:
                 System.out.println("enter taskname");
                 String nnn=s1.nextLine();
                 System.out.println(m.searchTask(nnn));
+                break;
                 case 7:
                 System.out.println("enter day(dd)");
                 int dd=s1.nextInt();
                 m.displayOverDue(dd);
+                break;
                 case 8:
                 m.displayAll();
-
+                break;
             }
         } while (l<9);
     s1.close();

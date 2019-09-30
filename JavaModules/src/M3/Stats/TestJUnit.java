@@ -76,19 +76,19 @@ public class TestJUnit {
 	@Test
 	public void testCase11() {
 		int[] arr = {1,2,3,4,1};
-		assertEquals(1, Stats.mode(arr));
+		assertEquals(1, Stats.mode(arr),0.01);
 	}
 
 	@Test
 	public void testCase12() {
 		int[] arr = {1,2,3,4,4};
-		assertEquals(4, Stats.mode(arr));
+		assertEquals(4, Stats.mode(arr),0.01);
 	}
 
 	@Test
 	public void testCase13() {
 		int[] arr = {1,2,3,4,4,4,2,2,2,3,3,3};
-		assertEquals(2, Stats.mode(arr));
+		assertEquals(2, Stats.mode(arr),0.001);
 	}
 
 	@Test
