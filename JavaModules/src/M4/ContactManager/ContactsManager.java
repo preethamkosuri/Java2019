@@ -19,22 +19,16 @@
 package M4.ContactManager;
 
 class ContactsManager {
-
     /**
      * Define a variable myFriends which is an array that can hold 
      * the contacts of your friends.
      */
     Contact[] myFriends = new Contact[500];
-    
-
     /**
      * Define a variable friendsCount of type int maintain the number of 
      * contacts of your friends.
      */
     int friendsCount = 0;
-
-
-
     /**
      * When the object of ContactManager is created, the constructor should 
      * constrcut the object initialy with the following requirements.
@@ -42,7 +36,6 @@ class ContactsManager {
      * 1. Initializes the friendsCount to 0 as there no contacts in the list.
      * 2. myFriends with array initial size of 500
      */
- 
     /**
      * The addContact method takes in a parameter of type contact object and 
      * adds this to the contact list.
@@ -52,7 +45,6 @@ class ContactsManager {
         //  Your code goes here....
         myFriends[friendsCount] = contact;
         friendsCount++;
-
         //  Nothing to be returned... As this method is void...
     }
  

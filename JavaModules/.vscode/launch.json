@@ -2,6 +2,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Listmain",
+            "request": "launch",
+            "mainClass": "M5.ToDoList.Listmain",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - test",
+            "request": "launch",
+            "mainClass": "M5.ToDoList.test",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TodoList",
+            "request": "launch",
+            "mainClass": "M5.ToDoList.TodoList",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - TestRunner",
             "request": "launch",
             "mainClass": "M4.ContactManager.TestRunner",
