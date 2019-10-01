@@ -57,22 +57,27 @@ class CardCatalog{
         n--;
     }
     public void printTheCatalog(String type) {
-        switch(type){
-            case "title":
-                for (int i=0;i<n;i++){
-                    System.out.println(bookTitle[i]);
-                }
-                break;
-            case "author":
-                for (int i=0;i<n;i++){
-                    System.out.println(bookAuthor[i]);
-                }
-                break;
-            case "subject":
-                for (int i=0;i<n; i++){
-                    System.out.println(bookSubject[i]);
-                }
-                break;
+        if(bookAuthor.length>0){
+            switch(type){
+                case "title":
+                    for (int i=0;i<n;i++){
+                        System.out.println(bookTitle[i]);
+                    }
+                    break;
+                case "author":
+                    for (int i=0;i<n;i++){
+                        System.out.println(bookAuthor[i]);
+                    }
+                    break;
+                case "subject":
+                    for (int i=0;i<n; i++){
+                        System.out.println(bookSubject[i]);
+                    }
+                    break;
+            }
+        }
+        else{
+            System.out.println("No books found!");
         }
     }
     private Card[] leftShift(Card[] array,int f) {
