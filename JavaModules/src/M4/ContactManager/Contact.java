@@ -9,9 +9,9 @@
 //  Your code goes here... For Contact class
 package M4.ContactManager;
 public class Contact{
-    String Name;
-    String Email;
-    String PhoneNumber;
+    private String Name;
+    private String Email;
+    private String PhoneNumber;
 
     public Contact(String Name, String Email,String PhoneNumber) {
         this.Name=Name;

@@ -57,7 +57,7 @@ class ContactsManager {
     public Contact searchContact(String searchName) {
         //  Your code goes here....
         for(int i=0; i < friendsCount; i++){
-            if(myFriends[i].Name.equals(searchName)){
+            if(myFriends[i].getName().equals(searchName)){
                 //System.out.println("searchContact -- End in if");
                 return myFriends[i];
             }
@@ -75,7 +75,7 @@ class ContactsManager {
     public Contact searchContactByEmail(String email) {
         //  Your code goes here....
         for(int i=0; i <friendsCount; i++){
-            if(myFriends[i].Email.equals(email)){
+            if(myFriends[i].getEmail().equals(email)){
                 return myFriends[i];
             }
         }

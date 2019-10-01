@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Yahzee",
+            "request": "launch",
+            "mainClass": "M3.Yahzee.Yahzee",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Listmain",
             "request": "launch",
             "mainClass": "M5.ToDoList.Listmain",
