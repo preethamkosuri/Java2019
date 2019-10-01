@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Hello",
+            "request": "launch",
+            "mainClass": "M1.Hello.Hello",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Cardmain",
             "request": "launch",
             "mainClass": "M4.CardCatalog.Cardmain",
