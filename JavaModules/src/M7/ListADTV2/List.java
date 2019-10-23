@@ -56,8 +56,7 @@ public class List {
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
-    private int size;
-    private int len;
+    private int size,len;
 
     /*
      * The purpose of the constructor is to initialize the
@@ -116,12 +115,20 @@ public class List {
      */
     public void add(int item) {
         //Inserts the specified element at the end of the list.
+        if(size<len){
         list[size]=item;
         size++;
+        }
+        else{
+            resize();
+            list[size]=item;
+            size++;
+        }
     }
-    public void resize(){
+    public void resize() {
         len=2*len;
-        int[] list=Arrays.copyOf(list,len);
+        list=Arrays.copyOf(list,len);
+        
 
     }
     /*
