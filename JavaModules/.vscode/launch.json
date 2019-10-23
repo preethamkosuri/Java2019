@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - BankMain",
+            "request": "launch",
+            "mainClass": "M8.BankManager.BankMain",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - EmpMain",
             "request": "launch",
             "mainClass": "M8.Employee.EmpMain",

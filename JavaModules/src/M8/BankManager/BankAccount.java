@@ -26,7 +26,7 @@ class BankAccount{
 
     @Override
     public String toString() {
-        return "BankAccount [accno=" + accno + ", balance=" + balance + "]";
+        return "Bank Account numner:" + accno + ", balance:" + balance;
     }
     
 }
