@@ -70,31 +70,8 @@ public class Clock {
 
     // Adds Δ min to the time on this clock.
     public void toc(int delta) {
-        int n1=delta%60;
-        int n2=delta/60;
-        if(h+n2>23){
-            h=h+n2;
-        }
-        else{
-            h=h+n2;
-        }
-        int N=60-m;
-        if(N>n1){
-            m=m+n1;
-            if(m==60){
-                m=00;
-                h++;
-                if(h==24){
-                    h=00;
-                }
-            }
-        }
-        else{
-            m=n1-N;
-            h++;
-            if(h==24){
-                h=00;
-            }
+        for(int i=0;i<delta;i++){
+            tic();
         }
     }
 
