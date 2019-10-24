@@ -80,7 +80,7 @@ package M7.Shapes;
     }
 
     public String toString() { 
-        return "The radius of this sphere = " + radius; 
+        return "The radius of this sphere = " + radius+"area = "+getArea()+"volume = "+getVolume(); 
     }
 
     public boolean equals(Object obj) { 
@@ -140,7 +140,7 @@ package M7.Shapes;
     }
 
     public String toString() { 
-        return "For this rectangular prism the base has the length = " + length + " and the width = " + width + "\nThe height of the prism = " + height; 
+        return "For this rectangular prism the base has the length = " + length + " and the width = " + width + "\nThe height of the prism = " + height+"area = "+getArea()+"volume = "+getVolume(); 
     }
 
     public boolean equals(Object obj) { 
@@ -169,7 +169,7 @@ package M7.Shapes;
 
 
     public String toString() { 
-        return "For this cube all sides = " + super.getLength(); 
+        return "For this cube all sides = " + super.toString(); 
     } 
 }
 
@@ -180,12 +180,6 @@ public class ShapeMain{
     public static final int MAX = 6; 
     public static void main(String[] args) { 
         Shape3D[] shapes = new Shape3D[MAX];
-        //SquarePyramid sq=new SquarePyramid(20,10);
-        //Sphere sp=new Sphere(10);
-        //RectangularPrism rp= new RectangularPrism(20,10,5);
-        //Cube cu=new Cube(7);
-        //double s1=sq.getArea();
-        //double s2=sq.getVolume();
         shapes[0]=new SquarePyramid(20,10);
         System.out.println(shapes[0]);
         shapes[1]=new Sphere(10);
