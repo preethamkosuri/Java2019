@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ShapeMain",
+            "request": "launch",
+            "mainClass": "M7.Shapes.ShapeMain",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - BankMain",
             "request": "launch",
             "mainClass": "M8.BankManager.BankMain",
