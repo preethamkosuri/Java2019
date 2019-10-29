@@ -2,6 +2,55 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "Projects.P1.Main",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Productfile",
+            "request": "launch",
+            "mainClass": "Projects.P1.Productfile",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Admin",
+            "request": "launch",
+            "mainClass": "Projects.P1.Admin",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "M9.Abs.Main",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestThrow1",
+            "request": "launch",
+            "mainClass": "M9.Abs.TestThrow1",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestRunner",
+            "request": "launch",
+            "mainClass": "M9.ListADTVersion2.TestRunner",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Demo",
+            "request": "launch",
+            "mainClass": "M9.Abs.Demo",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - ShapeMain",
             "request": "launch",
             "mainClass": "M7.Shapes.ShapeMain",
