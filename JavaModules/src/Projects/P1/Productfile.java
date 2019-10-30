@@ -29,7 +29,6 @@ public class Productfile {
             oos.writeObject(pro);
             oos.close();
             fos.close();
-            System.out.println("Done!!");
          }catch(Exception ioe) {
             System.out.println(ioe);
           }
@@ -42,7 +41,6 @@ public class Productfile {
            ArrayList<Log> pro = (ArrayList<Log>) ois.readObject();
            ois.close();
            fis.close();
-           System.out.println("yes");
            return pro;
        } catch (Exception e) {
             System.out.println("no");

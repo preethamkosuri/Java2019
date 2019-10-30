@@ -18,7 +18,7 @@ public class Main {
         Main s=new Main();
         s.disp();
         Cart[] list= new Cart[100];
-        ArrayList<Cart> detail=new ArrayList<Cart>();;
+        ArrayList<Cart> detail=new ArrayList<Cart>();
         int sum=0;
         int size=0;
         int s1=1;
