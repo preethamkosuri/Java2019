@@ -48,7 +48,7 @@ public class Product implements java.io.Serializable{
 
     @Override
     public String toString() {
-        return "Product Id: " + pid + ", price: " + price + ", qty: " + qty + "]";
+        return "Product Id: " + pid + ", price: " + price + ", qty: " + qty;
     }
     
     

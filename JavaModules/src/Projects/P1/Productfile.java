@@ -35,5 +35,35 @@ public class Productfile {
           }
 
     }
+    public static ArrayList<Log> readLogs(){
+        try {
+           FileInputStream fis = new FileInputStream("D:\\Java2019\\JavaModules\\logs.txt");
+           ObjectInputStream ois = new ObjectInputStream(fis);
+           ArrayList<Log> pro = (ArrayList<Log>) ois.readObject();
+           ois.close();
+           fis.close();
+           System.out.println("yes");
+           return pro;
+       } catch (Exception e) {
+            System.out.println("no");
+            System.out.println(e.getMessage());
+       }
+       return null;
+
+   }
+
+   public static void writeLogs(ArrayList<Log> pro){
+       try{ 
+           FileOutputStream fos = new FileOutputStream("D:\\Java2019\\JavaModules\\logs.txt"); 
+           ObjectOutputStream oos = new ObjectOutputStream(fos);
+           oos.writeObject(pro);
+           oos.close();
+           fos.close();
+           System.out.println("Done!! writing");
+        }catch(Exception e) {
+           System.out.println(e.getMessage());
+         }
+
+   }
 
 }

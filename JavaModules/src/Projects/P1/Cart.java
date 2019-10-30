@@ -1,6 +1,10 @@
 package Projects.P1;
-public class Cart{
-    int pid,qyt,price;
+public class Cart implements java.io.Serializable{
+    /**
+     *
+     */
+    private static final long serialVersionUID = 3727466473317379603L;
+    int pid, qyt, price;
 
     public Cart() {
     }
@@ -37,7 +41,7 @@ public class Cart{
 
     @Override
     public String toString() {
-        return "Cart [pid=" + pid + ", price=" + price + ", qyt=" + qyt + "]";
+        return "pid=" + pid + ", price=" + price + ", qyt=" + qyt;
     }
     
 }

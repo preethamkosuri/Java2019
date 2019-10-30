@@ -19,6 +19,7 @@ public class Main {
         Main s=new Main();
         s.disp();
         Cart[] list= new Cart[100];
+        ArrayList<Cart> detail=new ArrayList<Cart>();;
         int sum=0;
         int size=0;
         int s1=1;
@@ -32,6 +33,7 @@ public class Main {
                 int qty=sc.nextInt();
                 int price=pro.get(s1-1).getPrice();
                 Cart item = new Cart(s1, qty, price);
+                detail.add(item);
                 sum=sum+(qty*price);
                 list[size]=item;
                 size++;
@@ -44,11 +46,7 @@ public class Main {
             if(k==1){
                 System.out.println("Sign in required!");
                 System.out.println("enter username:");
-                String uname=sc.nextLine();
-                sc.next();
-                System.out.println("enter password:");
-                String upass=sc.nextLine();
-                sc.next();
+                String uname=sc.next();
                 for(int j=0;j<size;j++){
                     System.out.println(list[j]);
                 }
@@ -56,15 +54,25 @@ public class Main {
                 System.out.println("enter 1 to pay or 2 to exit:");
                 int a1=sc.nextInt();
                 Admin a=new Admin();
-                if(a1==1 && uname!=null && upass!=null){
-                    for(int e=0;e<=size;e++){
+                if(a1==1 && uname!=null){
+                    for(int e=0;e<size;e++){
                         int p1=list[e].getPid();
                         int q1=list[e].getQyt();
                         a.update(p1,1,-q1);
                     }
+                    System.out.println("uname:"+uname);
+                    Log l = new Log(uname, detail);
+                    System.out.println("T1");
+                    ArrayList<Log> ro = Productfile.readLogs();
+                    System.out.println("T2");
+                    if (ro == null)
+                        ro = new ArrayList<Log>();
+                    ro.add(l);
+                    Productfile.writeLogs(ro);
+                    System.out.println("T3");
                 }    
             }
-            Arrays.fill(list, 0);
+            //Arrays.fill(list, 0);
             }
         
         sc.close();

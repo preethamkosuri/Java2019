@@ -25,13 +25,17 @@ public class Admin {
             pro.get(pid-1).setPrice(n3);
             Productfile.writeProduts(pro);
         }
-        System.out.println(Productfile.readPrducts());
-       
+    }
+    public void viewlogs(){
+        ArrayList<Log> pro = Productfile.readLogs();
+        for(int i = 0; i < pro.size(); i++) {   
+            System.out.println(pro.get(i));
+        }  
     }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         Admin a=new Admin();
-        System.out.println("enter 1 to add product or 2 to update product:");
+        System.out.println("enter 1 to add product,2 to update product or 3 lor logs:");
         int op=sc.nextInt();
         if(op==1){
             System.out.println("enter the product Id:");
@@ -42,7 +46,7 @@ public class Admin {
             int qty=sc.nextInt();
             a.addPro(pid, qty, price);
         }
-        else{
+        else if(op==2){
             System.out.println("enter the product Id:");
             int pid=sc.nextInt();
             ArrayList<Product> pro = Productfile.readPrducts();
@@ -59,6 +63,12 @@ public class Admin {
                 int n3=sc.nextInt();
                 a.update(pid,n2,n3);
             }
+        
+
+        }
+        else{
+            a.viewlogs();
+            
 
         }
         sc.close();

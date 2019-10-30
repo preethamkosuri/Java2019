@@ -2,7 +2,11 @@ package Projects.P1;
 
 import java.util.ArrayList;
 
-public class Log{
+public class Log implements java.io.Serializable{
+    /**
+     *
+     */
+    private static final long serialVersionUID = 7229842416058040894L;
     String name;
     ArrayList<Cart> detail;
 
