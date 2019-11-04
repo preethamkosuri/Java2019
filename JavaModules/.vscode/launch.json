@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Snake",
+            "request": "launch",
+            "mainClass": "Projects.P3.Snake",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Main",
             "request": "launch",
             "mainClass": "Projects.P1.Main",
