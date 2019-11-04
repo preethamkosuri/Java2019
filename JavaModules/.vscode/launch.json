@@ -2,6 +2,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - B1",
+            "request": "launch",
+            "mainClass": "Ds.M1.B1",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - A2",
+            "request": "launch",
+            "mainClass": "Ds.M1.A2",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - A1",
+            "request": "launch",
+            "mainClass": "Ds.M1.A1",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - LearningbyDoing",
+            "request": "launch",
+            "mainClass": "Ds.M1.LearningbyDoing",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Snake",
             "request": "launch",
             "mainClass": "Projects.P3.Snake",
