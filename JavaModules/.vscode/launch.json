@@ -2,6 +2,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - BankMain",
+            "request": "launch",
+            "mainClass": "M7.Bank.BankMain",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Menu",
+            "request": "launch",
+            "mainClass": "M6.BookYourMovie.Menu",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestRunner",
+            "request": "launch",
+            "mainClass": "Ds.M3.A1.TestRunner",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - LearningbyDoing2",
+            "request": "launch",
+            "mainClass": "Ds.M3.LearningbyDoing2",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestRunner",
+            "request": "launch",
+            "mainClass": "Ds.M3.A2.TestRunner",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - LearningbyDoing1",
+            "request": "launch",
+            "mainClass": "Ds.M3.LearningbyDoing1",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - TestRunner",
             "request": "launch",
             "mainClass": "Ds.M2.A4.TestRunner",
