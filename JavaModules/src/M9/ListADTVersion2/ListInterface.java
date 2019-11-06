@@ -52,11 +52,11 @@ public interface ListInterface {
      * @param item, to be removed from a particular index in this list.
      */
     public void remove(int index);
-    public void addAll(int[] all);
+    /*public void addAll(int[] all);
     public void addInsert(int item,int index);
     public int lastIndexOf(int item);
     public int count(int item);
     public void set(int index, int item);
-    public List subList(int fromIndex, int toIndex);
+    public List subList(int fromIndex, int toIndex);*/
 
 }

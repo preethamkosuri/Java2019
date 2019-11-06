@@ -4,8 +4,8 @@ class OderedList extends AbstractList {
     private int size;
 
     public OderedList() {
-        array = new int[100];
-        size = 0;
+        array=new int[100];
+        size=0;
     }
     public void sort(){
         int temp;
@@ -16,16 +16,34 @@ class OderedList extends AbstractList {
                     array[j]=array[j=1];
                     array[j-1]=temp;
                 }
-
-
             }
         }
     }
     public void add(int item) {
-        array[size] = item;
-        size++;
-        sort();
-
+        if (size!=array.length) {
+            sort();
+            int index=0;
+            for (index=0;index<size; index++)
+                if(array[index]>item)
+                    break;
+            if (index==size){
+                array[index]=item;
+                size++;
+                return;
+            }
+            else{
+                int temp=array[index];
+                array[index]=item;
+                index++;
+                size++;
+                while (index<size) {
+                    int value=array[index];
+                    array[index]=temp;
+                    temp=value;
+                    index++;
+                }
+            }
+        }
     }
     public int search(int item){
         int last=size;
@@ -42,7 +60,49 @@ class OderedList extends AbstractList {
             mid=(first+last)/2;  
         } 
         return -1; 
-    }  
+    }
+
+    @Override
+    public int indexOf(int item){
+        if(size%2==0 && size!=0){
+            if(item<=array[(size/2)-1]){
+                for (int index = 0; index < size / 2; index++){
+                    if (item == array[index]){
+                        return index;
+                    }
+                }
+            }
+            else if(item>=array[size/2]){
+                for(int index=size/2;index<size;index++){
+                    if(item==array[index])
+                        return index;
+                }
+            }
+            else{
+                return -1;
+            }
+        }
+        else if(size%2==1){
+            if(item<= array[size/2]) {
+                for(int index=0;index<=size/2;index++) {
+                    if(item==array[index]){
+                        return index;
+                    }
+                }
+            }
+            else if(item>=array[(size/2)+1]){
+                for(int index=size/2+1;index<size;index++){
+                    if(item==array[index]){
+                        return index;
+                    }
+                }
+            }
+            else{
+                return -1;
+            }
+        }
+        return -1;
+    }
     
     
 }
