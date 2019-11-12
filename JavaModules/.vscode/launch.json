@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - LearningByDoing1",
+            "request": "launch",
+            "mainClass": "Ds.StacksandQueues.LearningByDoing1",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Solution",
             "request": "launch",
             "mainClass": "Ds.StudentReservationSystem.Solution",
