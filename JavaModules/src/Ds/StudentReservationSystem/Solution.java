@@ -1,7 +1,11 @@
+package Ds.StudentReservationSystem;
 
 import java.util.*;
 import java.io.*;
-class Student implements Comparable<Student>{
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
+class Student implements Comparable<Student> {
 	String name;
 	String dob;
 	int sub1;
@@ -10,14 +14,51 @@ class Student implements Comparable<Student>{
 	int marks;
 	String category;
 	boolean flag;
-	Student(String name, String dob, int sub1, int sub2, int sub3, int marks, String category){
-		//your code goes here.
+	SimpleDateFormat date = new SimpleDateFormat("dd-MM-yyyy");
+
+	public Student(String name, String dob, int sub1, int sub2, int sub3, int marks, String category) {
+		this.name = name;
+		this.dob = dob;
+		this.sub1 = sub1;
+		this.sub2 = sub2;
+		this.sub3 = sub3;
+		this.marks = marks;
+		this.category = category;
 	}
-	public int compareTo(Student stu) {
-     	//your code goes here.
-        return -1;
+
+	public int compareTo(Student s) {
+		if (this.marks == s.marks) {
+			if (this.sub3 == s.sub3) {
+				if (this.sub2 == s.sub2) {
+					if (this.sub1 == s.sub1) {
+						Date d1,d2;
+						try {
+							//System.out.println(this.dob);
+							d1 = date.parse(this.dob);
+							d2 = date.parse(s.dob);
+							return d1.compareTo(d2);
+						} catch (ParseException e) {
+							return 0;
+						}
+					}
+					else
+						return s.sub1 - this.sub1;
+				}
+				else
+					return s.sub2 - this.sub2;
+			} 
+			else
+				return s.sub3 - this.sub3;
+		}
+		else
+			return s.marks-this.marks;
     }
-    
+
+	@Override
+	public String toString() {
+		return "Student name=" + name + " category "+ category;
+	}
+	
 }
 
 class Selection{
@@ -35,10 +76,78 @@ class Selection{
 		this.scReserved = scReserved;
 		this.stReserved = stReserved;
 	}
-
+	
 	public Student[] getSelectedList(){
-		//your code goes here.
-		return null;
+		Arrays.sort(list);
+		int bc=0,sc=0,st=0;
+		for(int i=0;i<list.length;i++){
+			if(list[i].category.equals("BC")){
+				bc++;
+			}
+			else if(list[i].category.equals("SC")){
+				sc++;
+			}
+			else if(list[i].category.equals("ST")){
+				st++;
+			}
+		}
+		Student[] fin=new Student[vacancies];
+		int index=0,j=open;
+		for(int i=0;i<j;i++,--open,--vacancies){
+			fin[index++]=list[i];
+			if(list[i].category.equals("BC")){
+				bc--;
+			}
+			else if(list[i].category.equals("SC")){
+				sc--;
+			}
+			else if(list[i].category.equals("ST")){
+				st--;
+			}
+			System.out.println(fin[index-1]);
+		}
+		for(int i=j;j<list.length && vacancies>0;i++){
+			if(list[i].category.equals("BC") && bcReserved>0){
+				fin[index++]=list[i];
+				vacancies--;
+				bcReserved--;
+				bc--;
+				System.out.println(fin[index-1]);
+			}
+			else if(list[index].category.equals("SC") && scReserved>0){
+				fin[index++] = list[i];
+				vacancies--;
+				scReserved--;
+				sc--;
+				System.out.println(fin[index-1]);
+			}
+			else if(list[index].category.equals("ST") && stReserved>0){
+				fin[index++]=list[i];
+				vacancies--;
+				stReserved--;
+				st--;
+				System.out.println(fin[index-1]);
+			}
+			else if(bcReserved>0 && bc<=0){
+				fin[index++]=list[i];
+				bc--;
+				bcReserved--;
+				vacancies--;
+			}
+			else if(scReserved>0 && sc<=0){
+				fin[index++]=list[i];
+				sc--;
+				scReserved--;
+				vacancies--;
+			}
+			else if(stReserved>0 && st<=0){
+				fin[index++]=list[i];
+				st--;
+				stReserved--;
+				vacancies--;
+			}
+		}
+		return fin;
 	}
 }
 
@@ -47,8 +156,8 @@ public class Solution {
 		int no_of_testcases = 6;
 		int i = 0;
 		while(i < no_of_testcases){
-			String inputFile = "testcases/input00"+i+".txt";
-			String outputFile = "testcases/output00"+i+".txt";
+			String inputFile = "D:\\Java2019\\JavaModules\\src\\Ds\\StudentReservationSystem\\testcases\\input00"+i+".txt";
+			String outputFile = "D:\\Java2019\\JavaModules\\src\\Ds\\StudentReservationSystem\\testcases\\output00"+i+".txt";
 			ReadInput(inputFile,outputFile);
 			i++;
 		}	
@@ -68,6 +177,7 @@ public class Solution {
 			Student stu_obj = new Student(Student_info[0],Student_info[1], Integer.parseInt(Student_info[2]),Integer.parseInt(Student_info[3]),Integer.parseInt(Student_info[4]),Integer.parseInt(Student_info[5]), Student_info[6]);
 			sel_obj.list[i] = stu_obj;
 		}
+		
 		Student[] finallist = sel_obj.getSelectedList();
 		checkOutput(finallist, no_of_positions,outputFile);
 
@@ -75,13 +185,14 @@ public class Solution {
 	public static void checkOutput(Student[] arr, int no_of_positions, String outputFile) throws Exception{
 		Scanner sc = new Scanner(new File(outputFile));
 		for(int i = 0; i < no_of_positions; i++){
+			//System.out.println(arr[i].name);
 			if(!sc.nextLine().equals(arr[i].name)){
 				System.out.println("Your output is not matching with output in file "+ outputFile);
 				return;
 			}
 		}
-		System.out.println("your output with file "+ outputFile+" Matched. This Test case passed");
-
+		System.out.println("your output with file "+ outputFile +" Matched. This Test case passed");
+		
 	}
 
 }
