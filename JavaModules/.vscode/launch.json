@@ -2,6 +2,76 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - DoublyLinkedList",
+            "request": "launch",
+            "mainClass": "Ds.M8.DoublyLinkedList",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - QwithStacks2",
+            "request": "launch",
+            "mainClass": "Ds.CircularLinkedList.QwithStacks2",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - QwithStacks",
+            "request": "launch",
+            "mainClass": "Ds.CircularLinkedList.QwithStacks",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - H1",
+            "request": "launch",
+            "mainClass": "Ds.H1",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Micro",
+            "request": "launch",
+            "mainClass": "Ds.CircularLinkedList.Micro",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Postfix",
+            "request": "launch",
+            "mainClass": "Ds.CircularLinkedList.Postfix",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Monk",
+            "request": "launch",
+            "mainClass": "Ds.CircularLinkedList.Monk",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "Ds.CircularLinkedList.Main",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestRunner",
+            "request": "launch",
+            "mainClass": "Ds.StacksandQueues.A4.TestRunner",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestRunner",
+            "request": "launch",
+            "mainClass": "Ds.StacksandQueues.A2.TestRunner",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - LearningByDoing1",
             "request": "launch",
             "mainClass": "Ds.StacksandQueues.LearningByDoing1",
