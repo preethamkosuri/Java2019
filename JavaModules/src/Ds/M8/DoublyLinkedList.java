@@ -9,20 +9,6 @@ public class DoublyLinkedList<E> {
             this.element=e;
             this.prev=p;
             this.next=n;
-
-        }
-        public E getElement() {
-            return element;
-
-        }
-        public Node<E> getPrev() {
-            return prev;
-        }
-        public Node<E> getNext() {
-            return next;
-        }
-        public void setPrev(Node<E> p) {
-            this.prev = p;
         }
         public void setNext(Node<E> n) {
             this.next = n;
@@ -75,7 +61,6 @@ public class DoublyLinkedList<E> {
             Node<E> temp=getPosNode(pos);
             add(e, temp.prev, temp);
         }
-        
     }
     public E removeFirst() {
         return (size>0)?remove(header.next):null;
@@ -99,7 +84,6 @@ public class DoublyLinkedList<E> {
         node.next = null;
         size--;
         return node.element;
-        
     }
     public String toString(){
         String s="";
@@ -118,7 +102,6 @@ public class DoublyLinkedList<E> {
         header.next = nn;
         nn.next.prev = nn;
         size++;
-
     }
     public void moveToBack(int pos){
         Node<E> nn = getPosNode(pos);
@@ -135,10 +118,8 @@ public class DoublyLinkedList<E> {
         }
     }
     public static void main(String arg[]){
-
         DoublyLinkedList<Integer> o =new DoublyLinkedList<Integer>();
         int c,x;
-        
         Scanner sc=new Scanner(System.in);
         do{
             System.out.println("1:display; \n2:addFirst; \n3:addLast; \n4:add pos; \n5:display fist; \n6:display last; \n7:size; \n8:isempty; \n9:remove first; \n10:remove last; \n11:remove at pos; \n12:move to back \n13:move to front");
