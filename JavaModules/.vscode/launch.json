@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - A2",
+            "request": "launch",
+            "mainClass": "Ds.Hash.A2",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - A1",
+            "request": "launch",
+            "mainClass": "Ds.Hash.A1",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - DoublyLinkedList",
             "request": "launch",
             "mainClass": "Ds.M8.DoublyLinkedList",

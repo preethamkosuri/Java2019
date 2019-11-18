@@ -183,11 +183,11 @@ public class Solution {
 		}
 		Student[] finallist = sel_obj.getSelectedList();
 		checkOutput(finallist, no_of_positions,outputFile);
+		sc.close();
 	}
 	public static void checkOutput(Student[] arr, int no_of_positions, String outputFile) throws Exception{
 		Scanner sc = new Scanner(new File(outputFile));
 		for(int i = 0; i < no_of_positions; i++){
-			//System.out.println(arr[i].name);
 			if(!sc.nextLine().equals(arr[i].name)){
 				System.out.println("Your output is not matching with output in file "+ outputFile);
 				return;
