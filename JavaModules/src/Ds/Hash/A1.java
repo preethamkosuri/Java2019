@@ -5,8 +5,8 @@ class A1{
         Map<String,Integer> mn=new HashMap<String,Integer>();
         Integer n;
         for(String s:ss.split("[^a-zA-Z]+")) {
-            n= mn.get(s);
-            if(n== null) {
+            n=mn.get(s);
+            if(n==null) {
                 mn.put(s, 1);
             }
             else {
