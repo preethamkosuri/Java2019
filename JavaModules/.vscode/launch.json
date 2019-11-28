@@ -2,6 +2,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Permutation",
+            "request": "launch",
+            "mainClass": "Ds.P1.Permutation",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - RandomwithArray",
+            "request": "launch",
+            "mainClass": "Ds.P1.RandomwithArray",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Deque",
+            "request": "launch",
+            "mainClass": "Ds.P1.Deque",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solution",
+            "request": "launch",
+            "mainClass": "Ds.StockAnalysis.Solution",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - A1",
+            "request": "launch",
+            "mainClass": "Ds.Xam.A1",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - A2",
+            "request": "launch",
+            "mainClass": "Ds.Xam.A2",
+            "projectName": "JavaModules"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - TestRunner",
             "request": "launch",
             "mainClass": "Ds.Bst.A1.TestRunner",

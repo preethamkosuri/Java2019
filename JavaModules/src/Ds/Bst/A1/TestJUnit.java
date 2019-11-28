@@ -13,7 +13,6 @@ package Ds.Bst.A1;
 import org.junit.Test;
 import org.junit.Assert;
 import java.util.*;
-import java.lang.*;
 // import static org.junit.Assert.assertEquals;
 
 public class TestJUnit {
